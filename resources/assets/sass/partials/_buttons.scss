@@ -1,0 +1,15 @@
+button {
+	float: left;
+	width: 100px;
+	border: none;
+	background-color: $anchor-color;
+	color: #FFF;
+	padding: 10px 0;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 0.7em;
+	&:hover {
+		background-color: darken($anchor-color, 5%);
+	}
+}
