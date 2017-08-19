@@ -3,7 +3,7 @@
 @section('main')
 	<h2>Add new post</h2>
 	<div class="add">
-		<form method="post" action="/post/add">
+		<form method="post" action="{{ route('post.addPost') }}">
 			<input type="text" name="title" placeholder="Title">
 			<textarea name="teaser" placeholder="Teaser" rows="3"></textarea>
 			<textarea name="body" placeholder="Body" rows="10"></textarea>

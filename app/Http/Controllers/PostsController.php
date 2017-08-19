@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Tag;
+use App\Author;
 
 use Illuminate\Http\Request;
 
@@ -20,6 +21,13 @@ class PostsController extends Controller
 		return view('posts.tag')->with([
 			'posts' => $tag->posts()->latestFirst()->isLive()->get(),
 			'tag' => $tag,
+		]);
+	}
+
+	public function byAuthor(Author $author) {
+		return view('posts.author')->with([
+			'author' => $author->fullName(),
+			'posts' => $author->posts()->get(),
 		]);
 	}
 

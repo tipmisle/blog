@@ -9,9 +9,9 @@
 
 	@if(Auth::check())
 		<h3>Profile</h3>
-		<a href="/post/add">Add new post</a>
+		<a href="{{ route('post.add') }}">Add new post</a>
 		<br>
-		<a href="/logout">Logout</a>
+		<a href="{{route('user.logout')}}">Logout</a>
 	@else
 		<h3>Login</h3>
 			@if ($errors->any())

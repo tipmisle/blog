@@ -46,6 +46,11 @@ Route::get('/posts/{tag}', [
 	'uses' => 'PostsController@tagged',
 ]);
 
+Route::get('/postsby/{author}', [
+	'as' => 'posts.byAuthor',
+	'uses' => 'PostsController@byAuthor',
+])->where('author', '[0-9]+');
+
 Route::get('/logout', [
 	'as' => 'user.logout',
 	'uses' => 'UserController@logout',
