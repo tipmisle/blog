@@ -25,6 +25,13 @@
   margin-right: 0;
 }
 
+.navigation {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (min-width: 960px) {
   .sidebar {
     width: 32.20338983%;
@@ -36,6 +43,13 @@
     width: 66.10169492%;
     float: left;
     margin-right: 1.69491525%;
+  }
+
+  .navigation {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -219,5 +233,21 @@ button {
 
 button:hover {
   background-color: #31b0dc;
+}
+
+nav {
+  height: 45px;
+  background-color: #FF8A00;
+}
+
+nav > a {
+  height: 100%;
+  color: #fff;
+  margin-right: 30px;
+  text-align: center;
+}
+
+nav > a:hover {
+  background: #E87D00;
 }
 

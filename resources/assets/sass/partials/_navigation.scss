@@ -1,0 +1,15 @@
+nav {
+	height: 45px;
+	background-color: #FF8A00;
+}
+
+nav > a {
+	height: 100%;
+	color: #fff;
+	margin-right: 30px;
+	text-align: center;  
+}
+
+nav > a:hover {
+	background: #E87D00;
+}

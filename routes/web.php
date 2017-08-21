@@ -1,10 +1,61 @@
 <?php
 
+//Domov
 Route::get('/', [
 	'as' => 'home',
 	'uses' => 'PostsController@index',
 ]);
 
+/*
+	ABOUT ROUTES
+*/
+Route::get('/about', [
+	'as' => 'about',
+	'uses' => 'HomeController@about',
+]);
+
+
+/*
+	PROJECT ROUTES
+*/
+Route::get('/projects', [
+	'as' => 'projects',
+	'uses' => 'ProjectsController@index',
+]);
+
+Route::get('/project/add', [
+	'as' => 'project.add',
+	'uses' => 'ProjectsController@addView',
+]);
+
+Route::post('/project/add', [
+	'as' => 'project.addProject',
+	'uses' => 'ProjectsController@addProject',
+]);
+
+Route::get('project/{slug}/edit', [
+	'as' => 'project.edit',
+	'uses' => 'ProjectsController@editView'
+]);
+
+Route::post('project/{slug}/edit', [
+	'as' => 'project.editProject',
+	'uses' => 'ProjectsController@editProject'
+]);
+
+Route::get('/project/{project}', [
+	'as' => 'project.show',
+	'uses' => 'ProjectsController@show',
+]);
+
+Route::get('/project/{slug}/delete', [
+	'as' => 'project.delete',
+	'uses' => 'ProjectsController@delete',
+]);
+
+/*
+	POST ROUTES
+*/
 Route::get('/post/add', [
 	'as' => 'post.add',
 	'uses' => 'PostsController@add',

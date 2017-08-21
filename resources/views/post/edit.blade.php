@@ -3,7 +3,7 @@
 @section('main')
 	<h2>Edit post</h2>
 	<div class="add">
-		<form method="post" action="/post/{{$post->slug}}/edit">
+		<form method="post" action="{{ route('post.editPost', $post->slug) }}">
 			<input type="text" name="title" placeholder="Title" value="{{$post->title}}">
 			<textarea name="teaser" placeholder="Teaser" rows="3">{{$post->teaser}}</textarea>
 			<textarea name="body" placeholder="Body" rows="10">{{$post->body}}</textarea>
