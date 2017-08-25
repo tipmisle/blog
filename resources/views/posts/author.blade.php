@@ -1,5 +1,8 @@
 @extends('templates.app')
 
+@section('title')
+	{{ $author }}
+@endsection
 
 @section('main')
 	<div class="content">

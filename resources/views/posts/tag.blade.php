@@ -1,5 +1,8 @@
 @extends('templates.app')
 
+@section('title')
+	Tag: {{ $tag->name }}
+@endsection
 
 @section('main')
 	<div class="content">

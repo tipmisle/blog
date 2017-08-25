@@ -1,5 +1,9 @@
 .post {
-	margin-bottom: 60px; 
+	margin-bottom: 60px;
+	padding: 13px;
+	&:nth-child(even){
+			background-color: rgba(#000, 0.05); 
+		} 
 }
 
 .post__header {

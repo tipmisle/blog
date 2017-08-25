@@ -6,6 +6,10 @@
 	])
 @endsection
 
+@section('title')
+	{{ $project->title }}
+@endsection
+
 @section('main')
 	<article class="article">
 		<h1 class="article__header">{{ $project->title }}</h1>

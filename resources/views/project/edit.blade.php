@@ -1,7 +1,11 @@
 @extends('templates.app')
 
+@section('title')
+	Edit project
+@endsection
+
 @section('main')
-	<h2>Add new project</h2>
+	<h2>Edit project</h2>
 	<div class="add">
 		<form method="post" action="{{ route('project.editProject', $project->slug) }}">
 			<input type="text" name="title" placeholder="Title" value="{{ $project->title }}" required>

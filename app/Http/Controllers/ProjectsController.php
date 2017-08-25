@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
+	
     public function index(Project $project)
 	{
 		return view('projects')->with([

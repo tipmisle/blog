@@ -30,7 +30,10 @@
 .article__body {
 	font-size: 1.2em;
 	font-weight: $font-weight-normal;
-	margin-bottom: 60px;  
+	margin-bottom: 60px;
+	img {
+		max-width: 100%; 
+	}  
 }
 
 @include susy-breakpoint(720px) {

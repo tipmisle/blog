@@ -1,5 +1,8 @@
 @extends('templates.app')
 
+@section('title')
+	Projects
+@endsection
 
 @section('main')
 	<div class="content">
@@ -8,6 +11,12 @@
 		])		
 	</div>
 	<div class="sidebar">
+		<p>Latest posts on the blog</p>
+		<div class="listSidebar">
+			@include('posts.partials.list', [
+			'posts' => $posts
+		])
+		</div>
 		@include('templates.partials.sidebar')
 	</div>
 @endsection
