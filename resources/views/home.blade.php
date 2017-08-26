@@ -11,10 +11,12 @@
 		])		
 	</div>
 	<div class="sidebar">
-		<p>Check out my projects</p>
-		@include('project.partials.projectlist', [
+		<p><b>Check out my projects</b></p>
+		<div class="listSidebar">
+			@include('project.partials.projectlist', [
 			'projects' => $projects
-		])
+			])
+		</div>
 		@include('templates.partials.sidebar')
 	</div>
 @endsection

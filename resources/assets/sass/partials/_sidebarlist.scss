@@ -1,5 +1,17 @@
 .listSidebar {
-	.post__header {
-		font-size: 0.9em !important;
+	.post {
+		box-shadow: 0 1px 13px 0px rgba(#000, 0.4);
+		margin-bottom: 2px;
+		transition: 150ms box-shadow ease-in-out;
+		&:hover {
+			box-shadow: 0 3px 13px 0px rgba(#000, 0.4); 
+		}
+	}
+	h1 {
+		font-size: 1.0em !important;
+	}
+
+	.post__preview {
+		font-size: 0.8em; 
 	}
 }

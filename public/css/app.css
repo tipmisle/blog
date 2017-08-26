@@ -296,7 +296,47 @@ nav ul li a:hover {
           box-shadow: 0 -3px 0 0 #fff inset;
 }
 
-.listSidebar .post__header {
-  font-size: 0.9em !important;
+.listSidebar .post {
+  -webkit-box-shadow: 0 1px 13px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 13px 0px rgba(0, 0, 0, 0.4);
+  margin-bottom: 2px;
+  -webkit-transition: 150ms -webkit-box-shadow ease-in-out;
+  transition: 150ms -webkit-box-shadow ease-in-out;
+  transition: 150ms box-shadow ease-in-out;
+  transition: 150ms box-shadow ease-in-out, 150ms -webkit-box-shadow ease-in-out;
+}
+
+.listSidebar .post:hover {
+  -webkit-box-shadow: 0 3px 13px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 3px 13px 0px rgba(0, 0, 0, 0.4);
+}
+
+.listSidebar h1 {
+  font-size: 1.0em !important;
+}
+
+.listSidebar .post__preview {
+  font-size: 0.8em;
+}
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social li {
+  font-size: 1em;
+  float: left;
+  padding: 0 10px;
+}
+
+.social li a {
+  -webkit-transition: 150ms color ease-in-out;
+  transition: 150ms color ease-in-out;
+}
+
+.social li a:hover {
+  color: #FFF;
 }
 

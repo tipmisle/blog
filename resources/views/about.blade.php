@@ -16,19 +16,31 @@
 		<p>Then I realised I wanted to create something, not religiously use pre-existing software, that didn't suit me at all. I knew I was a very wrong guy for IT.</p>
 		<p>So then I started learning basic HTML, then continued with PHP, JS. My future plans are to master Laravel and React.</p>
 		<p>If you would like to get to work with me or just get know me better, contact me. You can do so by:</p>
-		<ul>
-			<li><a href="https://www.facebook.com/juskebudala">Facebook</a></li>
-			<li><a href="https://twitter.com/josip_rajkovic">Twitter</a></li>
-			<li><a href="https://www.instagram.com/tipmisle/">Instagram</a></li>
-			<li><a href="https://www.linkedin.com/in/josip-rajkovi%C4%87-a611a7a3/">LinkedIn</a></li>
-			<li><a href="https://www.linkedin.com/in/josip-rajkovi%C4%87-a611a7a3/">Mail</a></li>
-		</ul>
+<!-- 		<ul class="social">
+			<li>
+				<a href="https://www.facebook.com/juskebudala"><i class="ion-social-facebook"></i></a>
+			</li>
+			<li>
+				<a href="https://twitter.com/josip_rajkovic"><i class="ion-social-twitter"></i></a>
+			</li>
+			<li>
+				<a href="https://www.instagram.com/tipmisle/"><i class="ion-social-instagram"></i></a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/josip-rajkovi%C4%87-a611a7a3/"><i class="ion-social-linkedin"></i></a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/josip-rajkovi%C4%87-a611a7a3/"><i class="ion-ios-email"></i></a>
+			</li>
+		</ul> -->
 	</div>
 	<div class="sidebar">
-		<p>Check out my projects</p>
-		@include('project.partials.projectlist', [
+		<p><b>Check out my projects</b></p>
+		<div class="listSidebar">
+			@include('project.partials.projectlist', [
 			'projects' => $projects
-		])
+			])
+		</div>
 		@include('templates.partials.sidebar')
 	</div>
 @endsection

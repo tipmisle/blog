@@ -11,7 +11,7 @@
 		])		
 	</div>
 	<div class="sidebar">
-		<p>Latest posts on the blog</p>
+		<p><b>Latest posts on the blog</b></p>
 		<div class="listSidebar">
 			@include('posts.partials.list', [
 			'posts' => $posts
