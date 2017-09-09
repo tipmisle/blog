@@ -6,6 +6,7 @@ use App\Post;
 use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model {
+	protected $table = 'authors';
 
 	public function fullName() {
 		return $this->first_name . ' ' . $this->last_name;
