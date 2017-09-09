@@ -1,14 +1,14 @@
 .listSidebar {
 	.post {
-		box-shadow: 0 1px 13px 0px rgba(#000, 0.4);
-		margin-bottom: 2px;
+		margin-bottom: 10px;
 		transition: 150ms box-shadow ease-in-out;
-		&:hover {
-			box-shadow: 0 3px 13px 0px rgba(#000, 0.4); 
+
+		.post__author {
+			margin-bottom: 10px; 
 		}
 	}
 	h1 {
-		font-size: 1.0em !important;
+		font-size: 1em !important;
 	}
 
 	.post__preview {

@@ -1,15 +1,29 @@
-button {
+.button {
 	float: left;
 	width: 100px;
 	border: none;
 	background-color: $anchor-color;
 	color: #FFF;
-	padding: 10px 0;
+	padding: 5px 0;
 	text-align: center;
 	cursor: pointer;
 	font-weight: bold;
 	font-size: 0.7em;
 	&:hover {
 		background-color: darken($anchor-color, 5%);
+		color: #FFF;
 	}
+	&.gray {
+		background-color: rgba(#000, 0.4);
+		&:hover {
+			background-color: rgba(#000, 0.5); 
+		} 
+	}
+	i {
+		margin-right: 5px;
+	}
+}
+
+button {
+	padding: 10px 0 !important;
 }

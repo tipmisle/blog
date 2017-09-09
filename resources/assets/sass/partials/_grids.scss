@@ -9,6 +9,50 @@
 
 .sidebar {
 	@include span(12);
+	h3 {
+		width: 100%;
+		float: left;
+	}
+	.social {
+		width: 100%;
+		float: left;
+		list-style: none;
+		li {
+			float: left;
+			width: 20%;
+			padding: 0;
+			margin: 0;
+			text-align: center; 
+			a {
+				font-size: 1.7em; 
+			}
+			&:nth-child(1) {
+				a {
+					color: #3B5998;					
+				}
+			}
+			&:nth-child(2) {
+				a {
+					color: #1da1f2;
+				}
+			}
+			&:nth-child(3) {
+				a {
+					color: #f56040;				
+				}
+			}
+			&:nth-child(4) {
+				a {
+					color: #0077b5;
+				}
+			}
+			&:nth-child(5) {
+				a {
+					color: rgba(#000, 0.5);
+				}
+			}
+		}
+	}
 }
 
 .navigation {
@@ -20,7 +64,7 @@
 		@include span(4 last);
 	}
 
-	.content {
+	.content, .pagination {
 		@include span(8 of 12);
 	}
 

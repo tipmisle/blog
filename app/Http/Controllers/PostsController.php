@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use App\Post;
 use App\Tag;
 use App\Author;
-
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -13,7 +14,7 @@ class PostsController extends Controller
 	public function index(Post $post)
 	{
 		return view('home')->with([
-			'posts' => $post->latestFirst()->isLive()->get(),
+			'posts' => $post->latestFirst()->isLive()->paginate(5),
 		]);
 	}
 
@@ -31,8 +32,10 @@ class PostsController extends Controller
 		]);
 	}
 
-	public function add() {
-		return view('post.add');
+	public function add(Tag $tag) {
+		return view('post.add')->with([
+			'tags' => $tag->get(),
+		]);
 	}
 
 	public function addPost(Request $request) {
@@ -45,12 +48,20 @@ class PostsController extends Controller
 		$post->body = $request->body;
 		$post->image = $request->image;
 		$post->save();
+		foreach ($request->tags as $tag) {
+			DB::table('taggables')->insert([
+				'tag_id' => $tag,
+				'taggable_id' => $post->id,
+				'taggable_type' => "App\Post"
+			]);
+		}
 		return redirect()->route('home');
 	}
 
-	public function edit($slug) {
+	public function edit($slug, Tag $tag) {
 		$post = Post::where('slug', '=', $slug)->first();
-		return view('post.edit')->with(['post' => $post]);
+		$taggables = DB::table("taggables")->where("taggable_id", "=", $post->id)->get()->pluck('tag_id')->toArray();
+		return view('post.edit')->with(['post' => $post, 'tags' => $tag->get(), 'taggables' => $taggables]);
 	}
 
 	public function editPost(Request $request, $slug) {
@@ -63,6 +74,14 @@ class PostsController extends Controller
 		$post->body = $request->body;
 		$post->image = $request->image;
 		$post->save();
+		DB::table('taggables')->where('taggable_id', '=', $post->id)->delete();
+		foreach ($request->tags as $tag) {
+			DB::table('taggables')->insert([
+				'tag_id' => $tag,
+				'taggable_id' => $post->id,
+				'taggable_type' => "App\Post"
+			]);
+		}
 		return redirect()->route('home');
 	}
 

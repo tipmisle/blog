@@ -4,6 +4,20 @@
 	About
 @endsection
 
+@section('color')
+	#000
+@endsection
+
+@section('description')
+	Page about my life and work.
+@endsection
+
+@section('keywords')
+	about,programming,php,laravel,js,javascript,css,html,html5,vue,react
+@endsection
+
+
+
 @section('main')
 	<div class="content">
 		<h1>Hi there!</h1>
@@ -15,32 +29,40 @@
 		<p>All my required school practices were finished at one big company in my region, Savatech d.o.o. I was working there for combined 1 year in IT department as user support.</p>
 		<p>Then I realised I wanted to create something, not religiously use pre-existing software, that didn't suit me at all. I knew I was a very wrong guy for IT.</p>
 		<p>So then I started learning basic HTML, then continued with PHP, JS. My future plans are to master Laravel and React.</p>
-		<p>If you would like to get to work with me or just get know me better, contact me. You can do so by:</p>
-<!-- 		<ul class="social">
-			<li>
-				<a href="https://www.facebook.com/juskebudala"><i class="ion-social-facebook"></i></a>
-			</li>
-			<li>
-				<a href="https://twitter.com/josip_rajkovic"><i class="ion-social-twitter"></i></a>
-			</li>
-			<li>
-				<a href="https://www.instagram.com/tipmisle/"><i class="ion-social-instagram"></i></a>
-			</li>
-			<li>
-				<a href="https://www.linkedin.com/in/josip-rajkovi%C4%87-a611a7a3/"><i class="ion-social-linkedin"></i></a>
-			</li>
-			<li>
-				<a href="https://www.linkedin.com/in/josip-rajkovi%C4%87-a611a7a3/"><i class="ion-ios-email"></i></a>
-			</li>
-		</ul> -->
+		<p>My estimated skill set progress:</p>
+		<div class="progress">
+			<p class="name">HTML</p>
+			<div class="progress-inside" data-progress="55" style="width:0%; background-color: rgba(230, 120, 150, 1);">
+				<p>55%</p>
+			</div>
+		</div>
+		<div class="progress">
+			<p class="name">PHP</p>
+			<div class="progress-inside" data-progress="85" style="width:0%; background-color: rgba(120, 66, 130, 1);">
+				<p>85%</p>
+			</div>
+		</div>
+		<div class="progress">
+			<p class="name">Javascript</p>
+			<div class="progress-inside" data-progress="77" style="width:0%; background-color: rgba(10, 190, 200, 1);">
+				<p>77%</p>
+			</div>
+		</div>
+		<div class="progress">
+			<p class="name">Laravel</p>
+			<div class="progress-inside" data-progress="58" style="width:0%; background-color: rgba(10, 200, 10, 1);">
+				<p>58%</p>
+			</div>
+		</div>
+		<p>If you would like to get to work with me or just get know me better, reach out to me. You can do so via links in sidebar.</p>
 	</div>
 	<div class="sidebar">
-		<p><b>Check out my projects</b></p>
+		@include('templates.partials.sidebar')
+		<h3>Check out my projects</h3>
 		<div class="listSidebar">
 			@include('project.partials.projectlist', [
 			'projects' => $projects
 			])
 		</div>
-		@include('templates.partials.sidebar')
 	</div>
 @endsection

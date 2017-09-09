@@ -4,19 +4,27 @@
 	Home
 @endsection
 
+@section('color')
+	#000
+@endsection
+
+@section('description')
+	My homepage, where articles and posts live.
+@endsection
+
+@section('keywords')
+	home,programming,php,laravel,js,javascript,css,html,html5,vue,react
+@endsection
+
 @section('main')
 	<div class="content">
 		@include('posts.partials.list', [
 			'posts' => $posts
-		])		
-	</div>
+		])
+			
+		{{ $posts->links('vendor.pagination.bootstrap-4') }}
+	</div>	
 	<div class="sidebar">
-		<p><b>Check out my projects</b></p>
-		<div class="listSidebar">
-			@include('project.partials.projectlist', [
-			'projects' => $projects
-			])
-		</div>
 		@include('templates.partials.sidebar')
 	</div>
 @endsection

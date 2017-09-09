@@ -11,3 +11,11 @@
 @import 'navigation';
 @import 'sidebarlist';
 @import 'social';
+@import 'footer';
+@import 'progress';
+
+a {
+	&:hover {
+		color: darken($anchor-color, 10%);
+	}
+}

@@ -1,0 +1,16 @@
+footer {
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+	background-color: darken($anchor-color, 40%); 
+	padding: 20px 0; 
+	p {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		float: left;
+		color: rgba(#fff, 0.5); 
+		font-size: 0.8em; 
+		text-align: center
+	}
+}

@@ -107,5 +107,6 @@ Route::get('/logout', [
 	'uses' => 'UserController@logout',
 ]);
 
+
 Auth::routes();
 

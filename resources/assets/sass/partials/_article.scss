@@ -12,6 +12,97 @@
 
 .article {
 	margin-bottom: 60px;
+	blockquote {
+		position: relative;
+		width: 100%;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+	    padding: 10px 50px;
+		margin: 0px 0 30px;
+		float: left;
+		font-style: italic;
+		background-color: rgba(#000, 0.04);  
+		&:before, &:after {
+			content: '"';
+			position: absolute;
+			font-size: 3em;
+			color: rgba(0, 0, 0, 0.2);
+			font-weight: 800;
+		}
+		&:before {
+			top: -11px;
+			left: 16px;
+		}
+		&:after {
+			bottom: -35px;
+			right: 20px;
+		}
+	}
+	code {
+		background-color: rgba(0, 0, 0, 0.1);
+		padding: 3px 7px;
+	}
+	.postNavigation {
+		width: 100%;
+		float: left;
+		list-style: none;
+		padding: 0;
+		margin: 15px 0;
+		li {
+			width: 48%;
+			text-align: center;
+			&.previous {
+				float: left;
+				a {
+					i {
+						left: 10%
+					}
+				}
+			}
+			&.next {
+				float: right;
+				a {
+					i {
+						right: 10%
+					}
+				}
+			}
+			&:hover {
+				a {
+					background-color: rgba(#000, 0.1); 
+					color: rgba(#000, 0.8); 
+					box-shadow: 0 4px 30px 0 rgba(#000, 0.1); 
+				}
+			}
+			a {
+				width: 100%;
+				height: 30px;
+				float: left;
+				background-color: rgba(#000, 0.08);
+				padding: 20px 0; 
+				color: rgba(#000, 0.5);
+				line-height: 1em; 
+				position: relative;
+				transition: 200ms all ease-in-out;
+				i {
+					position: absolute;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					font-size: 1.5em; 
+				} 
+				p {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: 0; 
+					transform: translate(-50%, -50%);
+					
+				}
+			}
+		}
+	}
 }
 
 .article__header {
@@ -32,9 +123,17 @@
 	font-weight: $font-weight-normal;
 	margin-bottom: 60px;
 	img {
-		max-width: 100%; 
+		max-width: 100% !important;
+		height: auto !important; 
+	}
+	.button {
+		font-size: 0.8em;
+		width: auto;
+		margin-right: 10px;
+		padding: 10px 20px; 
 	}  
 }
+
 
 @include susy-breakpoint(720px) {
 	.article {
