@@ -14,9 +14,9 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('templates.partials.sidebar', function($view) {
-            return $view->with('tags', Tag::get());
-        });
+        // view()->composer('templates.partials.sidebar', function($view) {
+        //     return $view->with('tags', Tag::get());
+        // });
     }
 
     /**
