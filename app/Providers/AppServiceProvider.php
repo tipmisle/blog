@@ -16,9 +16,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         // Schema::defaultStringLength(191);
-         // View::share('projects', Project::all());
-         // View::share('posts', Post::all()->take(3));
+         Schema::defaultStringLength(191);
+         View::share('projects', Project::all());
+         View::share('posts', Post::all()->take(3));
     }
 
     /**
