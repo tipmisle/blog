@@ -39,6 +39,6 @@
 		<input type="text" name="email" placeholder="Email">
 		<input type="password" name="password" placeholder="Password">
 		<button class="button" type="submit">Login</button>
-		{{csrf_field()}}
+		{!! csrf_field() !!}
 	</form>
 @endif
