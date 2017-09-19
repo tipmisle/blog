@@ -3,6 +3,7 @@
 	<head>
 		<link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.ico') }}"/>
 		<meta charset="utf-8">
+		<meta name="csrf-token" content="{{ csrf_token() }}" />
 		<title>@yield('title') | Blog</title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
