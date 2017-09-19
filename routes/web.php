@@ -1,5 +1,5 @@
 <?php
-
+Auth::routes();
 //Domov
 Route::get('/', [
 	'as' => 'home',
@@ -108,5 +108,5 @@ Route::get('/logout', [
 ]);
 
 
-Auth::routes();
+
 
