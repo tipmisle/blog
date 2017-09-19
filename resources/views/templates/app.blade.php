@@ -32,4 +32,11 @@
 	  	crossorigin="anonymous">
 	</script>
 	<script type="text/javascript" src="{{ URL::asset('js/basic.js') }}"></script>
+	<script>
+		$.ajaxSetup({
+		    headers: {
+		        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		    	}
+			});
+	</script>
 </html>
