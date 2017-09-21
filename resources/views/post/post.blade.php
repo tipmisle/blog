@@ -14,6 +14,10 @@
 	#000
 @endsection
 
+@section('date')
+	{{ $post->created_at }}
+@endsection
+
 @section('description')
 	{{ $post->teaser }}
 @endsection
