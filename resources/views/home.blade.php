@@ -5,7 +5,7 @@
 @endsection
 
 @section('color')
-	#000
+	#225378
 @endsection
 
 @section('description')
