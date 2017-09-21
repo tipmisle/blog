@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106852393-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments)};
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-106852393-1');
+		</script>
 		<link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon.ico') }}"/>
 		<meta charset="utf-8">
 		<title>@yield('title') | Blog</title>
@@ -16,9 +25,7 @@
 		<meta name="author" content="Josip Rajković">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 		<meta name='robots' content='index,follow'>
-		<meta name='medium' content='blog'>
-
-	
+		<meta name='medium' content='blog'>	
 	</head>
 	<body>
 			@include('templates.partials.navbar')	
