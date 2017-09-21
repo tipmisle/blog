@@ -149,6 +149,11 @@ h3 {
   margin-bottom: 60px;
 }
 
+.article img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
 .article blockquote {
   position: relative;
   width: 100%;
