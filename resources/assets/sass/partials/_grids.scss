@@ -72,3 +72,12 @@
 		@include span(12 of 12);
 	}
 }
+
+@include susy-breakpoint(480px) {
+	.navigation {
+		@include span(12 of 12);
+		nav {
+			background-color: #000 !important; 
+		} 
+	}
+}
