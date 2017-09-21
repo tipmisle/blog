@@ -32,28 +32,34 @@
 		<p>My estimated skill set progress:</p>
 		<div class="progress">
 			<p class="name">HTML</p>
-			<div class="progress-inside" data-progress="55" style="width:0%; background-color: rgba(230, 120, 150, 1);">
-				<p>55%</p>
-			</div>
-		</div>
-		<div class="progress">
-			<p class="name">PHP</p>
-			<div class="progress-inside" data-progress="85" style="width:0%; background-color: rgba(120, 66, 130, 1);">
+			<div class="progress-inside" data-progress="85" style="width:0%; background-color: rgba(230, 120, 150, 1);">
 				<p>85%</p>
 			</div>
 		</div>
 		<div class="progress">
-			<p class="name">Javascript</p>
-			<div class="progress-inside" data-progress="77" style="width:0%; background-color: rgba(10, 190, 200, 1);">
-				<p>77%</p>
+			<p class="name">CSS</p>
+			<div class="progress-inside" data-progress="20" style="width:0%; background-color: #01A2A6;">
+				<p>20%</p>
+			</div>
+		</div>
+		<div class="progress">
+			<p class="name">PHP</p>
+			<div class="progress-inside" data-progress="55" style="width:0%; background-color: rgba(120, 66, 130, 1);">
+				<p>55%</p>
 			</div>
 		</div>
 		<div class="progress">
 			<p class="name">Laravel</p>
-			<div class="progress-inside" data-progress="58" style="width:0%; background-color: rgba(10, 200, 10, 1);">
-				<p>58%</p>
+			<div class="progress-inside" data-progress="50" style="width:0%; background-color: rgba(10, 200, 10, 1);">
+				<p>50%</p>
 			</div>
 		</div>
+		<div class="progress">
+			<p class="name">JavaScript</p>
+			<div class="progress-inside" data-progress="60" style="width:0%; background-color: rgba(10, 190, 200, 1);">
+				<p>60%</p>
+			</div>
+		</div>		
 		<p>If you would like to get to work with me or just get know me better, reach out to me. You can do so via links in sidebar.</p>
 	</div>
 	<div class="sidebar">

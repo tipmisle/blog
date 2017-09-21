@@ -7,6 +7,9 @@
 			<div class="post__author">
 				@if(Auth::check())<a href="{{ route('project.edit', $project->slug) }}">Edit</a> - <a href="{{ route('project.delete', $project->slug) }}">Delete</a>@endif
 			</div>
+			<a href="{{ route('project.show', $project->slug) }}">
+				<img src="{{$project->image}}" alt="">
+			</a>
 			<div class="post__preview">{{ $project->teaser }}</div>
 		</div>
 	@endforeach
