@@ -44,14 +44,14 @@
 		</div>
 		<div class="progress">
 			<p class="name">PHP</p>
-			<div class="progress-inside" data-progress="55" style="width:0%; background-color: rgba(120, 66, 130, 1);">
-				<p>55%</p>
+			<div class="progress-inside" data-progress="65" style="width:0%; background-color: rgba(120, 66, 130, 1);">
+				<p>65%</p>
 			</div>
 		</div>
 		<div class="progress">
 			<p class="name">Laravel</p>
-			<div class="progress-inside" data-progress="50" style="width:0%; background-color: rgba(10, 200, 10, 1);">
-				<p>50%</p>
+			<div class="progress-inside" data-progress="45" style="width:0%; background-color: rgba(10, 200, 10, 1);">
+				<p>45%</p>
 			</div>
 		</div>
 		<div class="progress">
